@@ -4,44 +4,97 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-    <div>
-        <select id="city">
-            <option value="bj">北京</option>
-            <option value="tj">天津</option>
-            <option value="sh">上海</option>
-        </select>
-        <select id="area">
-            <option>海淀</option>
-            <option>朝阳</option>
-            <option>东城</option>
-        </select>
 
-
-    </div>
-    <div>
-        <label for="txt">name</label>
-        <input id="txt" type="text" /> <span id="action"></span>
-    </div>
-
-
-    <div id="d1" >
-        <span >asdsafkj</span>
-        wrwerwe
-    </div>
-
-    <span id="span"></span>
-
-
-</body>
-
+<style type="text/css">
+    #d1{background-color: red;width:200px;height: 30px;}
+    /*#div2{background-color: pink;}*/
+</style>
 <script type="text/javascript">
+
+
+
+    var time = 5;
+    var timer;
+    timer = setInterval(
+        function(){
+            var second = document.getElementById("second");
+            if(time>=1){
+                second.innerHTML = time;
+                time--;
+            }else{
+                clearInterval(timer);
+                // location.href="https://www.baidu.com";
+            }
+        },
+        1000
+    );
+
     window.onload = function(){
         var span = document.getElementById("span");
         // alert(span);
         span.innerHTML = "hello js";
+
     };
+
+    // var res = confirm("您确认要删除吗？");
+    // alert(res);
+    // var res1 =  prompt("请输入密码？");
+    // alert(res1);
+    // window.open("http://www.baidu.com");
+    // open("demoh4.html");
+    // setTimeout(函数,毫秒值);
+    // setTimeout(
+    //     function(){
+    //         alert("xxyy");
+    //     },
+    //     3000
+    // );
+
+    // var timer;
+    // var fn = function(){
+    //     alert("x");
+    //     timer = setTimeout(fn,2000);
+    // };
+    // var closer = function(){
+    //     clearTimeout(timer);
+    // };
+    // fn();
 </script>
+
+<body>
+<div>
+    <select id="city">
+        <option value="bj">北京</option>
+        <option value="tj">天津</option>
+        <option value="sh">上海</option>
+    </select>
+    <select id="area">
+        <option>海淀</option>
+        <option>朝阳</option>
+        <option>东城</option>
+    </select>
+
+
+</div>
+<div>
+    <label for="txt">name</label>
+    <input id="txt" type="text" /> <span id="action"></span>
+</div>
+
+
+<div id="d1" >
+    <span >asdsafkj</span>
+    wrwerwe
+</div>
+
+<span id="span"></span>
+<div>
+    恭喜您注册成功，<span id="second" style="color: red;">5</span>
+    秒后跳转到首页，如果不跳转请<a href="demoh4.html">点击这里</a>
+</div>
+
+
+</body>
 
 <!--#d1{background-color: red;width:200px;height: 200px;}-->
 
