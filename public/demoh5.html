@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <select id="city">
+            <option value="bj">北京</option>
+            <option value="tj">天津</option>
+            <option value="sh">上海</option>
+        </select>
+        <select id="area">
+            <option>海淀</option>
+            <option>朝阳</option>
+            <option>东城</option>
+        </select>
+
+
+    </div>
+    <div>
+        <label for="txt">name</label>
+        <input id="txt" type="text" /> <span id="action"></span>
+    </div>
+
+
+    <div id="d1" >
+        <span >asdsafkj</span>
+        wrwerwe
+    </div>
+
+    <span id="span"></span>
+
+
+</body>
+
+<script type="text/javascript">
+    window.onload = function(){
+        var span = document.getElementById("span");
+        // alert(span);
+        span.innerHTML = "hello js";
+    };
+</script>
+
+<!--#d1{background-color: red;width:200px;height: 200px;}-->
+
+<script type="text/javascript">
+    var div = document.getElementById("d1");
+    div.onmouseover = function(){
+        this.style.backgroundColor = "green";
+    };
+    div.onmouseout = function(){
+        this.style.backgroundColor = "red";
+    };
+</script>
+
+<script type="text/javascript">
+
+    var txt = document.getElementById("txt");
+    txt.onfocus = function () {
+        //友好提示
+        var span = document.getElementById("action");
+        span.innerHTML = "用户格式最小8位";
+        span.style.color = "green";
+    };
+    txt.onblur = function (){
+        //错误提示
+        // alert(""+txt.value.length);
+        var span = document.getElementById("action");
+        if (txt.value.length<8){
+            span.innerHTML = "对不起 格式不正确";
+            span.style.color = "red";
+            span.style.display = "";
+        }else {
+            span.style.display = "none";
+        }
+
+    };
+
+    var select = document.getElementById("city");
+    select.onchange = function (){
+        var optionVal = select.value;
+        var area = document.getElementById("area");
+        switch (optionVal) {
+            case "bj":
+                // var area = document.getElementById("area");
+                area.innerHTML = "<option>海淀</option><option>朝阳</option><option>东城</option>";
+                break;
+            case "tj":
+                // var area = document.getElementById("area");
+                area.innerHTML = "<option>南开</option><option>西青</option><option>河西</option>";
+                break;
+            case "sh":
+                // var area = document.getElementById("area");
+                area.innerHTML = "<option>浦东</option><option>杨浦</option><option>徐汇</option><option>嘉定</option>";
+                break;
+            default:
+                alert("error");
+        }
+    }
+</script>
+
+
+
+</html>
