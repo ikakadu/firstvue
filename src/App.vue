@@ -1,15 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Base/>
+  </div>
+<!--  <img alt="Vue logo" src="./assets/logo1.png">
+  <div>
+    <Jianjie />
+  </div>-->
+
+<!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import Jianjie from './components/Jianjie.vue'
+import Base from './components/base.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld,
+    // Jianjie,
+    Base
   }
 }
 </script>
