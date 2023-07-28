@@ -74,7 +74,7 @@
 
 <script>
 import axios from 'axios'
-axios.defaults.baseURL = '/api'
+axios.defaults.baseURL = '/api' //通过前端设置代理跨域访问
 
 export default {
   data(){
@@ -107,19 +107,10 @@ export default {
       console.log(`时区格式---`, date.toISOString())//时区格式--- 2021-01-01T00:00:00.000Z
     },
     Save_project(){
-      // axios.post('http://localhost:8080/dd',this.form).then(
-      // axios.post('http://localhost:8080/dd',this.form
-        //   ,{headers: {
-        //   'Content-Type': 'application/json',
-        //   'Access-Control-Allow-Origin': '*'
-        // }}
-      // ).then(
-      axios.get('/dd'
-      //     ,{headers: {
-      //     'Content-Type': 'application/json',
-      //     'Access-Control-Allow-Origin': '*'
-      //   }}
-        ).then(
+      // axios.post('http://localhost:8080/dd',this.form)
+      // axios.get('/s?ie=UTF-8&wd=vue')
+      axios.get('/dd') //通过前端设置代理跨域访问
+        .then(
           this.$message({
             message:"保存成功",
             type:"success"
