@@ -1,10 +1,13 @@
 <template>
   <div>
-    <Jisuanshuxing/>
+    <tjxr/>
   </div>
 <!--  <div>-->
-<!--    <Base/>-->
+<!--    <HelloWorld/>-->
 <!--  </div>-->
+  <div>
+    <base1/>
+  </div>
 
 <!--  <img alt="Vue logo" src="./assets/logo1.png">-->
   <!--
@@ -20,8 +23,9 @@
 
 // import HelloWorld from './components/HelloWorld.vue'
 // import Jianjie from './components/Jianjie.vue'
-// import Base from './components/base.vue'
-import Jisuanshuxing from './components/JisuanShuxing.vue'
+import base1 from './components/BaseCom.vue'
+// import Jisuanshuxing from './components/JisuanShuxing.vue'
+import tjxr from './components/条件渲染.vue'
 // import Sqlite3 from './components/sqlite3.vue'
 // import TodoList from './components/TodoList.vue'
 
@@ -29,10 +33,12 @@ export default {
   name: 'App',
   components: {
     // HelloWorld,
+    base1,
     // Jianjie,
     // TodoList
     // jisuanshuxing: Jisuanshuxing
-    Jisuanshuxing
+    // Jisuanshuxing,
+    tjxr
   }
 }
 </script>
