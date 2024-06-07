@@ -21,25 +21,27 @@
 
 </template>
 
+<!--组合式API写法   <script setup>   -->
 <script setup>
 
 import {computed,reactive,ref} from "vue";
+const count = ref(0)
 const isActive = ref(false)
 const hasError = ref(false)
-// export default {
-//   name: "计算属性",
-//   data(){
-//     return{
-//       count:0,
-//       name:'John Doe',
-//       books: [
-//         'Vue 2 - Advanced Guide',
-//         'Vue 3 - Basic Guide',
-//         'Vue 4 - The Mystery'
-//       ]
-//     }
-//   }
-// }
+/*export default {
+  name: "计算属性",
+  data(){
+    return{
+      count:0,
+      name:'John Doe',
+      books: [
+        'Vue 2 - Advanced Guide',
+        'Vue 3 - Basic Guide',
+        'Vue 4 - The Mystery'
+      ]
+    }
+  }
+}*/
 
 const author = reactive({
   name: 'John Doe',
