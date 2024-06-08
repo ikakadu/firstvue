@@ -1,5 +1,13 @@
 # firstvue
 
+#####必要依赖第三包安装：
+
+cnpm install webpack-cli -g
+
+cnpm install node-polyfill-webpack-plugin
+
+cnpm install better-sqlite3
+
 ## Project setup
 ```
 npm install
