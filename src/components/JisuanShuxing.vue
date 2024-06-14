@@ -7,13 +7,19 @@
   <span>{{ publishedBooksMessage }}</span><br>
   <span>{{ calculateBooksMessage() }}</span>
   <p>{{now}}</p>
+  <p>{{new Date().now}}</p>
   <span>{{ fullName }}</span>
-  <span>{{ changeName() }}</span>
+
+<!--  <span>{{ changeName() }}</span>-->
+  <div>
+    <button @click="changeName()">changeName</button>
+  </div>
 
   <br><br>
   <button @click="updateBool()">updateBool</button>
   <p>isActive is: {{ isActive }}</p>
-  <div v-bind:class="{active: isActive }">qq</div>
+
+  <div v-bind:class="{active: isActive }">qqq</div>
   <div
       class="static"
       :class="{ active: isActive, 'text-danger': hasError }"
@@ -59,9 +65,22 @@ const publishedBooksMessage = computed(()=>{
 function calculateBooksMessage() {
   return author.books.length > 0 ? 'Yes' : 'No'
 }
-
+let fullNameTem = "";
+let fullName2 = "xiaoGou wangwang";
 function changeName() {
-  fullName.value = "xiaoGouqwwq"
+  // console.log("fullName:"+fullName);
+  console.log("fullName.value:"+fullName.value);
+
+  if (fullNameTem == ""){
+    console.log("1")
+    fullNameTem = fullName.value;
+    fullName.value = fullName2;
+  }else {
+    console.log("2")
+    fullName.value = fullNameTem
+    fullNameTem =fullName2;
+    fullName2 = fullName.value;
+  }
 }
 function updateBool() {
   if (isActive.value){

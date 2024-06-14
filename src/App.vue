@@ -1,4 +1,5 @@
 <template>
+  <router-link to="home">首页</router-link>
   <p>
     <strong>Current route path:</strong> {{ $route.fullPath }}
   </p>
@@ -8,7 +9,11 @@
   </nav>
   <RouterView/>-->
 
-  <div>
+  <div id="app">
+    <RouterView />
+  </div>
+
+<!--  <div>
 
     <router-link to="/hw">go to HelloWorld</router-link>
     <br>
@@ -16,12 +21,18 @@
     <br>
     <router-link to="/mbyy">go to 模板引用</router-link>
     <br>
+    <router-link to="/mbyf">go to 模板语法</router-link>
+    <br>
     <router-link to="/tjxr">go to 条件渲染</router-link>
     <br>
     <router-link to="/BaseCom">go to BaseCom</router-link>
     <br>
+    <router-link to="/ztq">go to 侦听器</router-link>
+    <br>
+    <router-link to="/ztq2">go to 侦听器2</router-link>
+
     <router-view></router-view>
-  </div>
+  </div>-->
 
   <!--  <div>-->
   <!--    <Jisuanshuxing/>-->
@@ -54,7 +65,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 // import Jianjie from './components/Jianjie.vue'
 // import base1 from './components/BaseCom.vue'
-import Jisuanshuxing from './components/JisuanShuxing.vue'
+// import Jisuanshuxing from './components/JisuanShuxing.vue'
 // import tjxr from './components/条件渲染.vue'
 // import Sqlite3 from './components/sqlite3.vue'
 // import TodoList from './components/TodoList.vue'
@@ -70,7 +81,7 @@ export default {
     // Jianjie,
     // TodoList
     // jisuanshuxing: Jisuanshuxing
-    Jisuanshuxing,
+    // Jisuanshuxing,
     // tjxr
     // ,mbyy
   },
