@@ -1,5 +1,6 @@
 <template>
-  <div class="tab">
+<!--  <div class="tab">-->
+  <div >
     Archive component
   </div>
 </template>

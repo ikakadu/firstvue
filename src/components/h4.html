@@ -13,9 +13,10 @@
 <script>
     var text = '{"name":"Bill Gates", "birth":"1955-10-28", "city":"Seattle"}';
     var obj1 = JSON.parse(text);
+    var num = 1;
     console.log(obj1)
     var obj = JSON.parse(text, function (key, value) {
-        console.log("a")
+        console.log("a"+num++)
         if (key == "birth") {
             return new Date(value);
         } else {

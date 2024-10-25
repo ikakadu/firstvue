@@ -58,7 +58,7 @@ export default {
   background: #e0e0e0;
 }
 .tab-button.active {
-  background: #e0e0e0;
+  background: #FF6B01;
 }
 .tab {
   border: 1px solid #ccc;

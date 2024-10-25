@@ -29,11 +29,8 @@
         <router-link class="nav-list-item" to="/jssx">go to jisuanshuxing</router-link>
       </li>
 
-      <li>
-        <router-link class="nav-list-item" to="/mbyy">go to 模板引用</router-link>
-      </li>
-    </ul>
-    <ul class="nav-list">
+<!--    </ul>-->
+<!--    <ul class="nav-list">-->
       <li>
         <router-link class="nav-list-item" to="/mbyf">go to 模板语法</router-link>
       </li>
@@ -53,15 +50,23 @@
       <li>
         <router-link class="nav-list-item" to="/blog">博客</router-link>
       </li>
-    </ul>
-    <ul class="nav-list">
+<!--    </ul>-->
+<!--    <ul class="nav-list">-->
       <li>
         <router-link class="nav-list-item" to="/alert">告警</router-link>
       </li>
       <li>
         <router-link class="nav-list-item" to="/dtzj">动态组件</router-link>
       </li>
-
+      <li>
+        <router-link class="nav-list-item" to="/innerComp">内置组件</router-link>
+      </li>
+      <li>
+        <router-link class="nav-list-item" to="/zhshs">组合式函数</router-link>
+      </li>
+      <li>
+        <router-link class="nav-list-item" to="/StuQueryTest">查询测试</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -77,10 +82,25 @@ export default {
 @import '../common/style/mixin';
 
 .nav-list {
+
+    //width: 1010px;
+    width: 100%;
+
+  .nav-list-item {
+    width: 20%;   /*如果显示三列 则width改为70px*/
+    height: 30px;
+    float: left;
+    display: block;
+  }
+}
+
+/*.nav-list {
   width: 100%;
   .fj();
   flex-direction: row;
-  padding: 0;
+  padding: 2px;
+  margin: 1px;
+  //border: 1px solid #000;
 
   .nav-list-item {
     display: flex;
@@ -107,5 +127,5 @@ export default {
       margin-bottom: 2px;
     }
   }
-}
+}*/
 </style>

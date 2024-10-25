@@ -15,6 +15,7 @@ import router from './router/router.js'; // 引入router
 
 
 const app = createApp(App)
+app.component()
 app.use(router)
 app.mount('#app')
 
