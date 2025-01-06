@@ -14,7 +14,7 @@
 
   <div>
     <button @click="Save_project">
-      跳转链接
+      获取数据
     </button>
   </div>
 
@@ -40,7 +40,7 @@
   </div>
   <div style="color: #42b983 ">Picked:{{picked}}</div>
   <input type="radio" id="one" value="one1" v-model="picked" >
-  <label for="one" style="color:darkred">one3</label>
+  <label for="one" style="color:darkred">one3</label>   <!--发现for属性可以去掉，系统自动就近匹配-->
   <input type="radio" id="two" value="two2" v-model="picked">
   <label for="two">two4</label>
 
@@ -53,7 +53,7 @@
   </select>
 
   <div>selectedList:{{selectedList}}</div>
-  <select v-model="selectedList" multiple>
+  <select v-model="selectedList" multiple>  <!--multiple-->
     <option disabled value="" >选择多个</option>
     <option>A</option>
     <option>B</option>
@@ -83,7 +83,8 @@
 
 <script>
 import axios from 'axios'
-axios.defaults.baseURL = '/api' //通过前端设置代理跨域访问
+// axios.defaults.baseURL = '/api' //通过前端设置代理跨域访问
+axios.defaults.baseURL = 'http://localhost:8088'
 
 export default {
   data(){
@@ -95,7 +96,7 @@ export default {
       ,selected:""
       ,selected1:""
       ,selectedList:""
-      ,toogle:""
+      ,toogle:''
       ,count: 0
       ,options:[
           {text:"one",value:"Aaa"}
@@ -122,9 +123,9 @@ export default {
       console.log(`时间格式10---`, new Date().toDateString());
     },
     Save_project(){
-      // axios.post('http://localhost:8080/dd',this.form)
+      axios.post('http://localhost:8080/dd',this.form) //经测试url如果是全路径，则axios.defaults.baseURL不起作用
       // axios.get('/s?ie=UTF-8&wd=vue') //跨域访问百度
-      axios.get('/dd') //通过前端设置代理跨域访问本地后端
+      // axios.get('/dd') //通过前端设置代理跨域访问本地后端
       .then(
           response => {
             console.log(response);
