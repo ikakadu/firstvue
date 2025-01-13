@@ -67,6 +67,12 @@
       <li>
         <router-link class="nav-list-item" to="/StuQueryTest">查询测试</router-link>
       </li>
+      <li>
+        <router-link class="nav-list-item" to="/lbxr">列表渲染</router-link>
+      </li>
+      <li>
+        <router-link class="nav-list-item" to="/sqlite3">sqlite3</router-link>
+      </li>
     </ul>
   </div>
 </template>

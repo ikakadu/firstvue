@@ -1,7 +1,9 @@
 <template>
+<!--App作为根组件，会被植入到其他所有组件，或者说其他组件都有继承根组件的内容-->
   <router-link to="home">首页</router-link>
   <p>
     <strong>Current route path:</strong> {{ $route.fullPath }}
+    <strong>Current route name:</strong> {{ $route.name }}
   </p>
 <!--  <nav>
     <RouterLink to="/hw">Go to HelloWorld</RouterLink>
@@ -57,6 +59,7 @@
     </div>-->
 
   <!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+
 </template>
 
 <script>
@@ -73,6 +76,7 @@
 // import {useRouter} from 'vue-router'
 // import { createMemoryHistory, createRouter } from 'vue-router'
 
+// import {RouterLink} from 'vue-router'
 export default {
   name: 'App',
   components: {
@@ -90,7 +94,11 @@ export default {
 
   }
 
-  , methods: {}
+  , methods: {
+    // RouterLink(){
+    //   return RouterLink
+    // }
+  }
 
 }
 </script>

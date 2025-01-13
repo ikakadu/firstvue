@@ -6,7 +6,14 @@ module.exports = defineConfig({
     transpileDependencies: true
     , lintOnSave: false // 关闭语法检查
     , configureWebpack: {
-        plugins: [new NodePolyfillPlugin()]
+        plugins: [new NodePolyfillPlugin()],
+        resolve: {
+            fallback: {
+                "fs": false,
+                "path": false,
+            }
+        }
+
     }
     , devServer: {
         port: 8081,  // 端口号的配置

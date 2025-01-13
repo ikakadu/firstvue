@@ -8,18 +8,22 @@ import MuBanYuFan from "@/components/MuBanYuFan";
 import ZhenTingQi from "@/components/ZhenTingQi";
 import ZhenTingQi2 from "@/components/ZhenTingQi2";
 import StuQueryTest from "@/components/StuQueryTest.vue";
-import Home from "@/views/Home";
 import Blog from "@/views/Blog";
 import Alert from "@/views/Alert";
 import Dtzj from "@/views/动态组件";
 import InnerComp from "@/views/InnerComp";
 import 组合式函数 from "@/views/组合式函数";
+import 列表渲染 from "@/components/列表渲染.vue";
+import sqlite3 from "@/components/sqlite3.vue";
+import Home from "@/views/Home";
+
 
 // import HelloWorld from 'src/components/HelloWorld.vue'
 // import Jisuanshuxing from './components/JisuanShuxing.vue'
 
 const routes = [
     {path: '/', redirect: '/home'},
+    {path: '/home', component: Home},
     {path: '/hw', component: HelloWorld},
     {path: '/jssx', component: Jisuanshuxing},
     {path: '/mbyy', component: MuBanYinYong},
@@ -28,13 +32,14 @@ const routes = [
     {path: '/mbyf', component: MuBanYuFan},
     {path: '/ztq', component: ZhenTingQi},
     {path: '/ztq2', component: ZhenTingQi2},
-    {path: '/home', component: Home},
     {path: '/blog', component: Blog},
     {path: '/alert', component: Alert},
     {path: '/dtzj', component: Dtzj},
     {path: '/innerComp', component: InnerComp},
     {path: '/zhshs', component: 组合式函数},
     {path: '/StuQueryTest', component: StuQueryTest},
+    {path: '/lbxr', component: 列表渲染},
+    {path: '/sqlite3', component: sqlite3},
 ]
 
 const router = createRouter({
