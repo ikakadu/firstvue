@@ -4,6 +4,7 @@ import App from './App.vue'
 // import router from '/src/router/router'; // 引入router
 import router from './router/router.js'; // 引入router
 // import router from './router/router'; // 引入router
+import Antd from 'ant-design-vue';
 
 
 // import {ref, reactive} from 'vue' // 配置自动导入，用来省略这句手动引入
@@ -15,7 +16,8 @@ import router from './router/router.js'; // 引入router
 
 
 const app = createApp(App)
-app.component()
+// app.component()
 app.use(router)
+app.use(Antd)
 app.mount('#app')
 

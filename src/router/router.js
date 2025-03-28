@@ -15,6 +15,8 @@ import InnerComp from "@/views/InnerComp";
 import 组合式函数 from "@/views/组合式函数";
 import 列表渲染 from "@/components/列表渲染.vue";
 import sqlite3 from "@/components/sqlite3.vue";
+import TableTest from "@/components/TableTest.vue";
+import TableTest2 from "@/components/TableTest2.vue";
 import Home from "@/views/Home";
 
 
@@ -40,6 +42,8 @@ const routes = [
     {path: '/StuQueryTest', component: StuQueryTest},
     {path: '/lbxr', component: 列表渲染},
     {path: '/sqlite3', component: sqlite3},
+    {path: '/TableTest', component: TableTest},
+    {path: '/TableTest2', component: TableTest2},
 ]
 
 const router = createRouter({

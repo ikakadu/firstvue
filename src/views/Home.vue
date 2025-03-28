@@ -73,6 +73,12 @@
       <li>
         <router-link class="nav-list-item" to="/sqlite3">sqlite3</router-link>
       </li>
+      <li>
+        <router-link class="nav-list-item" to="/TableTest">TableTest</router-link>
+      </li>
+      <li>
+        <router-link class="nav-list-item" to="/TableTest2">TableTest2</router-link>
+      </li>
     </ul>
   </div>
 </template>
